@@ -54,11 +54,8 @@ CREATE TABLE users (
 -- STUDENTS
 -- =========================
 CREATE TABLE students (
-    student_id INT IDENTITY(1,1) PRIMARY KEY,
-    -- ID tự động tăng
-
-    user_id INT NOT NULL,
-    -- liên kết tới users(user_id)
+    user_id INT PRIMARY KEY,
+    -- Khóa chính, liên kết trực tiếp tới users(user_id)
 
     date_of_birth DATE,
 
@@ -82,11 +79,8 @@ CREATE TABLE students (
 -- TEACHERS
 -- =========================
 CREATE TABLE teachers (
-    teacher_id INT IDENTITY(1,1) PRIMARY KEY,
-    -- ID tự động tăng
-
-    user_id INT NOT NULL,
-    -- liên kết tới users(user_id)
+    user_id INT PRIMARY KEY,
+    -- Khóa chính, liên kết trực tiếp tới users(user_id)
 
     expertise NVARCHAR(255),
     -- chuyên môn: IELTS, TOEIC, Grammar...
@@ -166,7 +160,7 @@ CREATE TABLE classes (
 
     CONSTRAINT fk_classes_teacher
         FOREIGN KEY (teacher_id)
-        REFERENCES teachers(teacher_id)
+        REFERENCES teachers(user_id)
         ON DELETE SET NULL
 );
 
@@ -191,7 +185,7 @@ CREATE TABLE enrollments (
 
     CONSTRAINT fk_enrollments_student
         FOREIGN KEY (student_id)
-        REFERENCES students(student_id)
+        REFERENCES students(user_id)
         ON DELETE CASCADE,
 
     CONSTRAINT fk_enrollments_class
@@ -252,7 +246,7 @@ CREATE TABLE materials (
 
     CONSTRAINT fk_materials_teachers
         FOREIGN KEY (uploaded_by)
-        REFERENCES teachers(teacher_id)
+        REFERENCES teachers(user_id)
         ON DELETE CASCADE
 );
 
@@ -284,7 +278,7 @@ CREATE TABLE assignments (
 
     CONSTRAINT fk_assignments_teacher
         FOREIGN KEY (teacher_id)
-        REFERENCES teachers(teacher_id)
+        REFERENCES teachers(user_id)
         ON DELETE CASCADE
 );
 
@@ -316,7 +310,7 @@ CREATE TABLE submissions (
 
     CONSTRAINT fk_submissions_student
         FOREIGN KEY (student_id)
-        REFERENCES students(student_id)
+        REFERENCES students(user_id)
         ON DELETE NO ACTION,
 
     CONSTRAINT unique_submission UNIQUE (assignment_id, student_id)
@@ -367,7 +361,7 @@ CREATE TABLE test_results (
 
     CONSTRAINT fk_test_results_student
         FOREIGN KEY (student_id)
-        REFERENCES students(student_id)
+        REFERENCES students(user_id)
         ON DELETE CASCADE
 );
 

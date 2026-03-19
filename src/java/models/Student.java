@@ -1,7 +1,6 @@
 package models;
 
 public class Student {
-    private int studentId;
     private int userId;
     private java.util.Date dateOfBirth;
     private String address;
@@ -12,8 +11,7 @@ public class Student {
     // Constructors
     public Student() {}
     
-    public Student(int studentId, int userId, java.util.Date dateOfBirth, String address, String parentName, String parentPhone, String level) {
-        this.studentId = studentId;
+    public Student(int userId, java.util.Date dateOfBirth, String address, String parentName, String parentPhone, String level) {
         this.userId = userId;
         this.dateOfBirth = dateOfBirth;
         this.address = address;
@@ -23,9 +21,6 @@ public class Student {
     }
     
     // Getters and Setters
-    public int getStudentId() { return studentId; }
-    public void setStudentId(int studentId) { this.studentId = studentId; }
-    
     public int getUserId() { return userId; }
     public void setUserId(int userId) { this.userId = userId; }
     

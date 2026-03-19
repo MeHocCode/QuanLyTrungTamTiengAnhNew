@@ -1,7 +1,6 @@
 package dto;
 
 public class TeacherDTO {
-    private int teacherId;
     private int userId;
     private String name;
     private String email;
@@ -14,9 +13,8 @@ public class TeacherDTO {
     // Constructors
     public TeacherDTO() {}
     
-    public TeacherDTO(int teacherId, int userId, String name, String email, String phone, 
+    public TeacherDTO(int userId, String name, String email, String phone, 
                      String expertise, int experienceYears, String qualification, String active) {
-        this.teacherId = teacherId;
         this.userId = userId;
         this.name = name;
         this.email = email;
@@ -28,9 +26,6 @@ public class TeacherDTO {
     }
     
     // Getters and Setters
-    public int getTeacherId() { return teacherId; }
-    public void setTeacherId(int teacherId) { this.teacherId = teacherId; }
-    
     public int getUserId() { return userId; }
     public void setUserId(int userId) { this.userId = userId; }
     

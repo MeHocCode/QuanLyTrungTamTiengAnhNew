@@ -1,12 +1,12 @@
 package service;
 
-import java.util.List;
-import models.TestResult;
-import models.MockTest;
-import models.Student;
-import dal.TestResultDAO;
 import dal.MockTestDAO;
 import dal.StudentDAO;
+import dal.TestResultDAO;
+import java.util.List;
+import models.MockTest;
+import models.Student;
+import models.TestResult;
 
 public class TestResultService {
     
@@ -45,7 +45,7 @@ public class TestResultService {
             return false; // Test doesn't exist
         }
         
-        Student student = studentDAO.getStudentById(testResult.getStudentId());
+        Student student = studentDAO.getStudentByUserId(testResult.getStudentId());
         if (student == null) {
             return false; // Student doesn't exist
         }

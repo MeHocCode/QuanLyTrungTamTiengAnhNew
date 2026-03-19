@@ -7,6 +7,8 @@ public class Submission {
     private String fileUrl;
     private java.util.Date submittedAt;
     private java.util.Date createdAt;
+    private double grade;
+    private String feedback;
     
     // Constructors
     public Submission() {}
@@ -38,4 +40,10 @@ public class Submission {
     
     public java.util.Date getCreatedAt() { return createdAt; }
     public void setCreatedAt(java.util.Date createdAt) { this.createdAt = createdAt; }
+    
+    public double getGrade() { return grade; }
+    public void setGrade(double grade) { this.grade = grade; }
+    
+    public String getFeedback() { return feedback; }
+    public void setFeedback(String feedback) { this.feedback = feedback; }
 }

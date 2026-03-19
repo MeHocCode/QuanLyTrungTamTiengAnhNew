@@ -5,10 +5,12 @@ public class EnrollmentDTO {
     private int studentId;
     private String studentName;
     private String studentEmail;
+    private String studentPhone;
     private int classId;
     private String className;
     private String courseTitle;
     private String teacherName;
+    private String teacherEmail;
     private String status;
     private java.util.Date enrolledAt;
     private java.util.Date startDate;
@@ -47,6 +49,9 @@ public class EnrollmentDTO {
     public String getStudentEmail() { return studentEmail; }
     public void setStudentEmail(String studentEmail) { this.studentEmail = studentEmail; }
     
+    public String getStudentPhone() { return studentPhone; }
+    public void setStudentPhone(String studentPhone) { this.studentPhone = studentPhone; }
+    
     public int getClassId() { return classId; }
     public void setClassId(int classId) { this.classId = classId; }
     
@@ -58,6 +63,9 @@ public class EnrollmentDTO {
     
     public String getTeacherName() { return teacherName; }
     public void setTeacherName(String teacherName) { this.teacherName = teacherName; }
+    
+    public String getTeacherEmail() { return teacherEmail; }
+    public void setTeacherEmail(String teacherEmail) { this.teacherEmail = teacherEmail; }
     
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }

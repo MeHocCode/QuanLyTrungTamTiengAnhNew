@@ -1,7 +1,6 @@
 package models;
 
 public class Teacher {
-    private int teacherId;
     private int userId;
     private String expertise;
     private int experienceYears;
@@ -10,8 +9,7 @@ public class Teacher {
     // Constructors
     public Teacher() {}
     
-    public Teacher(int teacherId, int userId, String expertise, int experienceYears, String qualification) {
-        this.teacherId = teacherId;
+    public Teacher(int userId, String expertise, int experienceYears, String qualification) {
         this.userId = userId;
         this.expertise = expertise;
         this.experienceYears = experienceYears;
@@ -19,9 +17,6 @@ public class Teacher {
     }
     
     // Getters and Setters
-    public int getTeacherId() { return teacherId; }
-    public void setTeacherId(int teacherId) { this.teacherId = teacherId; }
-    
     public int getUserId() { return userId; }
     public void setUserId(int userId) { this.userId = userId; }
     
