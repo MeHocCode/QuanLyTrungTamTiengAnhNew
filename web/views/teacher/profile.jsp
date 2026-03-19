@@ -1,10 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher Profile</title>
+    <title>Teacher Profile - EduLingo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/static/css/common.css" rel="stylesheet">
 </head>
@@ -12,7 +13,61 @@
     <div class="container-fluid">
         <div class="row">
             <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                <%@ include file="../includes/teacher-sidebar.jsp" %>
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/teacher/dashboard">
+                                <i class="bi bi-house-fill"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/teacher/profile">
+                                <i class="bi bi-person"></i> My Profile
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/teacher/classes">
+                                <i class="bi bi-building"></i> My Classes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/teacher/assignments">
+                                <i class="bi bi-file-earmark-text"></i> Assignments
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/teacher/materials">
+                                <i class="bi bi-folder"></i> Materials
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/teacher/students">
+                                <i class="bi bi-people"></i> Students
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Quick Actions</span>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/teacher/create-class">
+                                <i class="bi bi-plus-circle"></i> Create Class
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/teacher/create-assignment">
+                                <i class="bi bi-plus-square"></i> Create Assignment
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/Logout">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
             
             <main class="col-md-10 ms-sm-auto px-4">
@@ -27,7 +82,7 @@
                                 <h5 class="card-title mb-0">Profile Information</h5>
                             </div>
                             <div class="card-body">
-                                <form method="post" action="profile?action=update">
+                                <form method="post" action="${pageContext.request.contextPath}/teacher/profile?action=update">
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <label for="name" class="form-label">Full Name</label>
