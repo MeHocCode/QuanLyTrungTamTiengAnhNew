@@ -121,21 +121,9 @@ public class RegisterController extends HttpServlet {
             return "Invalid phone number format";
         }
         
-        // Validate password strength
-        if (password.length() < 8) {
-            return "Password must be at least 8 characters long";
-        }
-        
-        if (!password.matches(".*[A-Z].*")) {
-            return "Password must contain at least one uppercase letter";
-        }
-        
-        if (!password.matches(".*[a-z].*")) {
-            return "Password must contain at least one lowercase letter";
-        }
-        
-        if (!password.matches(".*\\d.*")) {
-            return "Password must contain at least one number";
+        // Validate password
+        if (password.length() < 6) {
+            return "Password must be at least 6 characters long";
         }
         
         // Check password confirmation
