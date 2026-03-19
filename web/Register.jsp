@@ -1,10 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Registration - English Center</title>
+    <title>Student Registration - EduLingo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/static/css/common.css" rel="stylesheet">
 </head>
@@ -14,8 +16,7 @@
             <div class="col-md-8 mx-auto">
                 <div class="card shadow">
                     <div class="card-header text-center">
-                        <h3 class="mb-0">Student Registration - English Center</h3>
-                        <p class="text-muted mb-2">Create your student account</p>
+                        <h3 class="mb-0">Student Registration - EduLingo</h3>
                         <div class="mt-2">
                             <a href="Home.jsp" class="btn btn-sm btn-outline-secondary">
                                 <i class="bi bi-house"></i> Home
@@ -23,9 +24,6 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-                        <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-                        
                         <c:if test="${not empty error}">
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                 ${error}
@@ -87,13 +85,6 @@
                             
                             <div class="text-center mt-3">
                                 <a href="Login.jsp">Already have an account? Login here</a>
-                            </div>
-                            
-                            <div class="text-center mt-2">
-                                <small class="text-muted">
-                                    Teacher accounts are created by administrators only.<br>
-                                    Session will expire when you close the browser or logout.
-                                </small>
                             </div>
                         </form>
                     </div>

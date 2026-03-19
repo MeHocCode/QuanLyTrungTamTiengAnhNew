@@ -1,10 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - English Center</title>
+    <title>Login - EduLingo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/static/css/common.css" rel="stylesheet">
 </head>
@@ -14,7 +16,7 @@
             <div class="col-md-6 mx-auto">
                 <div class="card shadow">
                     <div class="card-header text-center">
-                        <h3 class="mb-0">English Center Login</h3>
+                        <h3 class="mb-0">EduLingo Login</h3>
                         <div class="mt-2">
                             <a href="Home.jsp" class="btn btn-sm btn-outline-secondary">
                                 <i class="bi bi-house"></i> Home
@@ -22,9 +24,6 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-                        <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-                        
                         <c:if test="${not empty error}">
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                 ${error}
@@ -65,11 +64,6 @@
                                 <a href="Register.jsp">Don't have an account? Register here</a>
                             </div>
                             
-                            <div class="text-center mt-2">
-                                <small class="text-muted">
-                                    Session will expire when you close the browser or logout.
-                                </small>
-                            </div>
                         </form>
                     </div>
                 </div>

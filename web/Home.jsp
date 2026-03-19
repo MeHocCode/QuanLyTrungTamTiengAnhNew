@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Center - Home</title>
+    <title>EduLingo - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/static/css/common.css" rel="stylesheet">
 </head>
@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="Home.jsp">
-                <strong>English Center</strong>
+                <strong>EduLingo</strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -48,7 +48,7 @@
     <!-- Hero Section -->
     <div class="jumbotron bg-primary text-white py-5 mb-4">
         <div class="container text-center">
-            <h1 class="display-4 fw-bold">Welcome to English Center</h1>
+            <h1 class="display-4 fw-bold">Welcome to EduLingo</h1>
             <p class="lead">Learn English with experienced teachers and modern teaching methods</p>
             <p class="mt-4">
                 <a class="btn btn-light btn-lg" href="Register.jsp" role="button">Get Started</a>
@@ -128,7 +128,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>About English Center</h2>
+                    <h2>About EduLingo</h2>
                     <p>We are dedicated to providing high-quality English education to students of all levels. Our experienced teachers use modern teaching methods to help you achieve your language learning goals.</p>
                     <p>Whether you're a beginner or looking to improve your advanced skills, we have the right course for you.</p>
                 </div>
