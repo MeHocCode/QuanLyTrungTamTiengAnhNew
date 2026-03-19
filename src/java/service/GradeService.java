@@ -78,6 +78,6 @@ public class GradeService {
     
     public List<Grade> getGradesBySubmissionId(int submissionId) {
         // TODO: Implement get grades by submission ID
-        return gradeDAO.getGradesBySubmissionId(submissionId);
+        return gradeDAO.getGradesByAssignmentId(submissionId);
     }
 }
