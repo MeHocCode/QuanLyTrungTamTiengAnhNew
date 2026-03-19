@@ -12,7 +12,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="Home.jsp">
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/Home.jsp">
                 <strong>EduLingo</strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="Home.jsp">Home</a>
+                        <a class="nav-link active" href="${pageContext.request.contextPath}/Home.jsp">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#courses">Courses</a>
@@ -35,10 +35,10 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="Login.jsp">Login</a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/Login.jsp">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Register.jsp">Register</a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/Register.jsp">Register</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@
             <h1 class="display-4 fw-bold">Welcome to EduLingo</h1>
             <p class="lead">Learn English with experienced teachers and modern teaching methods</p>
             <p class="mt-4">
-                <a class="btn btn-light btn-lg" href="Register.jsp" role="button">Get Started</a>
+                <a class="btn btn-light btn-lg" href="${pageContext.request.contextPath}/Register.jsp" role="button">Get Started</a>
                 <a class="btn btn-outline-light btn-lg ms-2" href="#courses" role="button">View Courses</a>
             </p>
         </div>
@@ -97,7 +97,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Beginner English</h5>
                             <p class="card-text">Basic grammar, vocabulary, and conversation skills</p>
-                            <a href="Register.jsp" class="btn btn-primary">Enroll Now</a>
+                            <a href="${pageContext.request.contextPath}/Register.jsp" class="btn btn-primary">Enroll Now</a>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Intermediate English</h5>
                             <p class="card-text">Improve your fluency and comprehension</p>
-                            <a href="Register.jsp" class="btn btn-primary">Enroll Now</a>
+                            <a href="${pageContext.request.contextPath}/Register.jsp" class="btn btn-primary">Enroll Now</a>
                         </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Advanced English</h5>
                             <p class="card-text">Master complex grammar and professional communication</p>
-                            <a href="Register.jsp" class="btn btn-primary">Enroll Now</a>
+                            <a href="${pageContext.request.contextPath}/Register.jsp" class="btn btn-primary">Enroll Now</a>
                         </div>
                     </div>
                 </div>

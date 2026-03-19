@@ -18,7 +18,7 @@
                     <div class="card-header text-center">
                         <h3 class="mb-0">EduLingo Login</h3>
                         <div class="mt-2">
-                            <a href="Home.jsp" class="btn btn-sm btn-outline-secondary">
+                            <a href="${pageContext.request.contextPath}/Home.jsp" class="btn btn-sm btn-outline-secondary">
                                 <i class="bi bi-house"></i> Home
                             </a>
                         </div>
@@ -45,7 +45,7 @@
                             </div>
                         </c:if>
                         
-                        <form method="post" action="Login">
+                        <form method="post" action="${pageContext.request.contextPath}/Login">
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email...">
@@ -61,7 +61,7 @@
                             </div>
                             
                             <div class="text-center mt-3">
-                                <a href="Register.jsp">Don't have an account? Register here</a>
+                                <a href="${pageContext.request.contextPath}/Register.jsp">Don't have an account? Register here</a>
                             </div>
                             
                         </form>

@@ -138,6 +138,24 @@
         <url-pattern>/enrollment</url-pattern>
     </servlet-mapping>
     
+    <!-- Student Course Mappings -->
+    <servlet-mapping>
+        <servlet-name>CourseController</servlet-name>
+        <url-pattern>/student/courses</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CourseController</servlet-name>
+        <url-pattern>/student/course-detail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EnrollmentController</servlet-name>
+        <url-pattern>/student/enroll</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EnrollmentController</servlet-name>
+        <url-pattern>/student/enroll-class</url-pattern>
+    </servlet-mapping>
+    
     <!-- Phase 2 Controller Mappings -->
     <servlet-mapping>
         <servlet-name>MaterialController</servlet-name>

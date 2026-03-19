@@ -18,7 +18,7 @@
                     <div class="card-header text-center">
                         <h3 class="mb-0">Student Registration - EduLingo</h3>
                         <div class="mt-2">
-                            <a href="Home.jsp" class="btn btn-sm btn-outline-secondary">
+                            <a href="${pageContext.request.contextPath}/Home.jsp" class="btn btn-sm btn-outline-secondary">
                                 <i class="bi bi-house"></i> Home
                             </a>
                         </div>
@@ -38,7 +38,7 @@
                             </div>
                         </c:if>
                         
-                        <form method="post" action="Register">
+                        <form method="post" action="${pageContext.request.contextPath}/Register">
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
                                 <input type="text" class="form-control" id="username" name="username" value="${username}" required placeholder="Enter your username...">
@@ -65,7 +65,7 @@
                                     <div class="mb-3">
                                         <label for="password" class="form-label">Password</label>
                                         <input type="password" class="form-control" id="password" name="password" required placeholder="Enter your password...">
-                                        <div class="form-text">Minimum 8 characters with uppercase, lowercase, and numbers.</div>
+                                        <div class="form-text">Minimum 6 characters.</div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -84,7 +84,7 @@
                             </div>
                             
                             <div class="text-center mt-3">
-                                <a href="Login.jsp">Already have an account? Login here</a>
+                                <a href="${pageContext.request.contextPath}/Login.jsp">Already have an account? Login here</a>
                             </div>
                         </form>
                     </div>
@@ -100,15 +100,9 @@
             const confirmPassword = document.getElementById('confirmPassword').value;
             
             // Basic password validation
-            if (password.length < 8) {
+            if (password.length < 6) {
                 e.preventDefault();
-                alert('Password must be at least 8 characters long.');
-                return;
-            }
-            
-            if (!/[A-Z]/.test(password) || !/[a-z]/.test(password) || !/\d/.test(password)) {
-                e.preventDefault();
-                alert('Password must contain at least one uppercase letter, one lowercase letter, and one number.');
+                alert('Password must be at least 6 characters long.');
                 return;
             }
             
